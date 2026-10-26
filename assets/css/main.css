@@ -5457,6 +5457,49 @@ section,
   transform: translateY(-2px);
 }
 
+/* Shared action button color */
+.btn,
+.header .btn-getstarted,
+.hero .btn-get-started,
+.call-to-action .cta-btn,
+.pricing .buy-btn,
+.subscribe .cta-form .btn,
+.equipment-note-action,
+.equipment-card .product-order,
+.blog-comments .comment-actions .action-btn {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+.btn:hover,
+.header .btn-getstarted:hover,
+.header .btn-getstarted:focus:hover,
+.hero .btn-get-started:hover,
+.call-to-action .cta-btn:hover,
+.pricing .buy-btn:hover,
+.subscribe .cta-form .btn:hover,
+.equipment-note-action:hover,
+.equipment-card .product-order:hover,
+.blog-comments .comment-actions .action-btn:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 15%);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 15%);
+  color: var(--contrast-color);
+}
+
+#whatsapp {
+  background-color: #198754;
+  border-color: #198754;
+  color: #ffffff;
+}
+
+#whatsapp:hover,
+#whatsapp:focus {
+  background-color: #157347;
+  border-color: #146c43;
+  color: #ffffff;
+}
+
 @media (max-width: 768px) {
   .error-404 {
     padding: 60px 0;
