@@ -24,7 +24,7 @@
   --background-color: #f7f9fc;
   --default-color: #526174;
   --heading-color: #102a43;
-  --accent-color: #138ee8;
+  --accent-color: #1d78a8;
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -32,11 +32,11 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #ffffff;  /* The default color of the main navmenu links */
-  --nav-hover-color: #47b2e4; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #6b9db5; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #47b2e4; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #6b9db5; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -868,7 +868,7 @@ body:not(.index-page) .header {
   --heading-color: #ffffff;
   color: var(--default-color);
   background-color: var(--background-color);
-  background-image: radial-gradient(circle at 85% 20%, rgba(71, 178, 228, 0.25), transparent 38%);
+  background-image: none;
   padding: 150px 0 70px;
   position: relative;
 }
@@ -978,9 +978,7 @@ section,
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
-  background:
-    radial-gradient(circle at 82% 35%, rgba(71, 178, 228, 0.18), transparent 30%),
-    var(--background-color);
+  background: var(--background-color);
   width: 100%;
   min-height: 80vh;
   position: relative;
@@ -1444,15 +1442,21 @@ section,
 }
 
 .services .service-item .service-image {
+  align-items: center;
+  background: #f5f8fc;
+  display: flex;
   height: 170px;
+  justify-content: center;
   margin: 0 -30px 28px;
   overflow: hidden;
 }
 
 .services .service-item .service-image img {
+  display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  padding: 8px;
   transition: transform 0.6s ease;
 }
 
@@ -1488,7 +1492,7 @@ section,
 }
 
 .services .service-item:hover .service-image img {
-  transform: scale(1.08);
+  transform: none;
 }
 
 .services .service-item:hover h4 a {
@@ -2554,6 +2558,7 @@ section,
 
 /* Title block */
 #contact .section-title {
+  padding-top: 18px;
   padding-bottom: 32px;
   text-align: left;
 }
@@ -2912,7 +2917,7 @@ section,
 
 .page-hero {
   min-height: 440px;
-  padding: 170px 0 90px;
+  padding: 68px 0 90px;
 }
 
 .page-hero h1 {
@@ -2931,7 +2936,7 @@ section,
 }
 
 .equipment-catalog {
-  padding-top: 145px;
+  padding-top: 110px;
   padding-bottom: 90px;
 }
 
@@ -3064,7 +3069,7 @@ section,
 }
 
 .product-detail {
-  padding-top: 145px;
+  padding-top: 110px;
   padding-bottom: 90px;
 }
 
@@ -3243,7 +3248,7 @@ section,
 
 @media (max-width: 767px) {
   .product-detail {
-    padding-top: 120px;
+    padding-top: 51px;
   }
 
   .product-meta {
@@ -3325,7 +3330,7 @@ section,
 
 .equipment-note-inner {
   align-items: center;
-  background: linear-gradient(135deg, var(--surface-color), color-mix(in srgb, var(--accent-color), white 94%));
+  background: var(--surface-color);
   border: 1px solid color-mix(in srgb, var(--accent-color), transparent 78%);
   border-radius: 20px;
   box-shadow: 0 18px 45px color-mix(in srgb, var(--heading-color), transparent 90%);
@@ -3464,7 +3469,7 @@ h6 {
 .index-page .header,
 .index-page.scrolled .header,
 body:not(.index-page) .header {
-  --background-color: rgba(16, 42, 67, 0.94);
+  --background-color: #102a43;
 }
 
 .header .logo img {
@@ -3475,7 +3480,7 @@ body:not(.index-page) .header {
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
   background: var(--accent-color);
-  box-shadow: 0 8px 20px rgba(19, 142, 232, 0.24);
+  box-shadow: none;
   font-weight: 600;
 }
 
@@ -3520,15 +3525,12 @@ section,
   max-width: 680px;
 }
 
-.equipment-catalog {
-  padding-top: 132px;
+.equipment-page .equipment-catalog {
+  padding-top: 120px;
 }
 
 .hero {
-  background:
-    radial-gradient(circle at 85% 22%, rgba(56, 196, 255, 0.26), transparent 28%),
-    radial-gradient(circle at 54% 92%, rgba(19, 142, 232, 0.2), transparent 34%),
-    #102a43;
+  background: #102a43;
   min-height: 88vh;
   padding: 150px 0 90px;
 }
@@ -3560,7 +3562,7 @@ section,
 
 .hero .btn-get-started {
   background: #38bdf8;
-  box-shadow: 0 14px 28px rgba(56, 189, 248, 0.22);
+  box-shadow: 0 4px 12px rgba(16, 42, 67, 0.18);
   font-weight: 700;
 }
 
@@ -3571,7 +3573,7 @@ section,
 }
 
 .hero .hero-img img {
-  filter: drop-shadow(0 28px 40px rgba(0, 0, 0, 0.3));
+  filter: none;
 }
 
 .clients,
@@ -3718,8 +3720,8 @@ section,
     padding: 130px 0 70px;
   }
 
-  .equipment-catalog {
-    padding-top: 105px;
+  .equipment-page .equipment-catalog {
+    padding-top: 100px;
   }
 
   .pricing .featured {
@@ -3736,12 +3738,12 @@ section,
   isolation: isolate;
   min-height: 630px;
   overflow: hidden;
+  padding-top: 68px;
   padding-bottom: 48px;
 }
 
 .index-page .hero::after {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
-  background-size: 44px 44px;
+  background-image: none;
   content: "";
   inset: 0;
   opacity: 0.35;
@@ -3757,6 +3759,11 @@ section,
 
 .index-page .hero h1 {
   max-width: 680px;
+}
+
+.index-page .hero .hero-eyebrow {
+  font-size: 15px;
+  margin-top: 6px;
 }
 
 .index-page .hero .hero-img {
@@ -3883,6 +3890,7 @@ section,
 @media (max-width: 767px) {
   .index-page .hero {
     min-height: auto;
+    padding-top: 95px;
   }
 
   .index-page .hero .hero-img {
@@ -3906,12 +3914,14 @@ section,
 .equipment-page .equipment-catalog .section-title {
   margin-left: auto;
   margin-right: auto;
-  max-width: 860px;
+  max-width: none;
   text-align: left;
+  width: 100%;
 }
 
 .equipment-page .equipment-catalog .section-title p {
   margin-left: 0;
+  max-width: none;
 }
 
 .equipment-page .shop-toolbar {
@@ -3927,7 +3937,7 @@ section,
 }
 
 .equipment-page .equipment-card > img {
-  background: linear-gradient(145deg, #f8fbff, #edf5fb);
+  background: #edf2f5;
   height: 220px;
 }
 
@@ -3971,11 +3981,14 @@ body:not(.index-page):not(.equipment-page):not(.product-details-page) {
 }
 
 .page-title {
-  background:
-    radial-gradient(circle at 85% 20%, rgba(56, 189, 248, 0.18), transparent 30%),
-    #102a43;
+  background: #102a43;
   color: #ffffff;
-  padding: 150px 0 62px;
+  padding: 110px 0 62px;
+}
+
+.blog-page .page-title,
+.blog-details-page .page-title {
+  padding-top: 110px;
 }
 
 .page-title h1 {
@@ -3993,7 +4006,6 @@ body:not(.index-page):not(.equipment-page):not(.product-details-page) {
 
 .blog-page .blog-posts,
 .blog-details-page .blog-details,
-.service-details-page .service-details,
 .portfolio-details-page .portfolio-details,
 .starter-page-page .starter-section,
 .page-404 .error-404 {
@@ -4001,7 +4013,6 @@ body:not(.index-page):not(.equipment-page):not(.product-details-page) {
 }
 
 .blog-page .blog-posts article,
-.service-details-page .services-list,
 .portfolio-details-page .portfolio-info,
 .starter-page-page .starter-section .container {
   border: 1px solid rgba(16, 42, 67, 0.08);
@@ -4018,11 +4029,6 @@ body:not(.index-page):not(.equipment-page):not(.product-details-page) {
   margin: -30px -30px 0;
 }
 
-.service-details-page .services-img {
-  border-radius: 20px;
-  box-shadow: 0 16px 40px rgba(16, 42, 67, 0.08);
-}
-
 .portfolio-details-page .portfolio-details-slider img {
   border-radius: 20px;
 }
@@ -4034,7 +4040,12 @@ body:not(.index-page):not(.equipment-page):not(.product-details-page) {
 
 @media (max-width: 767px) {
   .page-title {
-    padding: 124px 0 46px;
+    padding: 95px 0 46px;
+  }
+
+  .blog-page .page-title,
+  .blog-details-page .page-title {
+    padding-top: 95px;
   }
 
   .starter-page-page .starter-section .container {
@@ -4115,72 +4126,6 @@ body:not(.index-page):not(.equipment-page):not(.product-details-page) {
 .portfolio-details .portfolio-description p {
   padding: 0;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
-}
-
-/*--------------------------------------------------------------
-# Service Details Section
---------------------------------------------------------------*/
-.service-details .services-list {
-  background-color: var(--surface-color);
-  padding: 10px 30px;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  margin-bottom: 20px;
-}
-
-.service-details .services-list a {
-  display: block;
-  line-height: 1;
-  padding: 8px 0 8px 15px;
-  border-left: 3px solid color-mix(in srgb, var(--default-color), transparent 70%);
-  margin: 20px 0;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  transition: 0.3s;
-}
-
-.service-details .services-list a.active {
-  color: var(--heading-color);
-  font-weight: 700;
-  border-color: var(--accent-color);
-}
-
-.service-details .services-list a:hover {
-  border-color: var(--accent-color);
-}
-
-.service-details .services-img {
-  margin-bottom: 20px;
-}
-
-.service-details h3 {
-  font-size: 26px;
-  font-weight: 700;
-}
-
-.service-details h4 {
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.service-details p {
-  font-size: 15px;
-}
-
-.service-details ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
-}
-
-.service-details ul li {
-  padding: 5px 0;
-  display: flex;
-  align-items: center;
-}
-
-.service-details ul i {
-  font-size: 20px;
-  margin-right: 8px;
-  color: var(--accent-color);
 }
 
 /*--------------------------------------------------------------
@@ -5014,7 +4959,7 @@ body:not(.index-page):not(.equipment-page):not(.product-details-page) {
   top: 80px;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(to bottom, color-mix(in srgb, var(--accent-color), transparent 40%), color-mix(in srgb, var(--accent-color), transparent 90%));
+  background: #c4d2da;
   z-index: 0;
 }
 
