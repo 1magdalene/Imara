@@ -3907,6 +3907,52 @@ section,
     padding-left: 0;
     padding-top: 32px;
   }
+
+  .index-page .about {
+    overflow: hidden;
+    padding: 38px 0;
+  }
+
+  .index-page .about .about-row {
+    --bs-gutter-x: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .index-page .about .about-copy,
+  .index-page .about .about-details {
+    min-width: 0;
+    padding-bottom: 24px;
+    padding-top: 24px;
+    width: 100%;
+  }
+
+  .index-page .about .about-copy h2 {
+    font-size: clamp(28px, 8vw, 36px);
+    margin-bottom: 16px;
+  }
+
+  .index-page .about .about-copy > p:first-of-type,
+  .index-page .about .about-copy p,
+  .index-page .about .about-details p,
+  .index-page .about .about-details li {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .index-page .about .about-details h3 {
+    font-size: 24px;
+    margin-bottom: 18px;
+  }
+
+  .index-page .about .about-details li {
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .index-page .about .about-details li span {
+    min-width: 0;
+  }
 }
 
 /* Shop and product catalogue */
