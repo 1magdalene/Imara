@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" role="img" aria-labelledby="title">
+  <title>WatchGuard</title>
+  <path fill="#ef7d22" d="M24 18h36v10H34v24h26v10H24zm46 0h12l8 28 8-28h11l8 28 8-28h12L123 62h-12l-8-27-8 27H84z"/>
+  <text x="155" y="50" fill="#263746" font-family="Arial,sans-serif" font-size="23" font-weight="700">WatchGuard</text>
+</svg>

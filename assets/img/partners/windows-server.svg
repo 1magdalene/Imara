@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" role="img" aria-labelledby="title">
+  <title>Windows Server</title>
+  <path fill="#0078d4" d="m24 20 25-4v23H24zm29-5 27-4v28H53zM24 43h25v23l-25-4zm29 0h27v28l-27-4z"/>
+  <text x="96" y="48" fill="#1f2937" font-family="Arial,sans-serif" font-size="23" font-weight="700">Windows Server</text>
+</svg>
