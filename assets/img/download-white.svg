@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 276">
-  <defs>
-    <filter id="white-logo" color-interpolation-filters="sRGB">
-      <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
-    </filter>
-  </defs>
-  <image href="download.png" width="2000" height="276" filter="url(#white-logo)"/>
-</svg>

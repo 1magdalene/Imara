@@ -9,12 +9,47 @@
 (function() {
   "use strict";
 
+  function updateCartNavigation() {
+    const cart = JSON.parse(localStorage.getItem('imaraCart') || '[]');
+    const count = cart.reduce((total, item) => total + Number(item.quantity || 0), 0);
+    document.querySelectorAll('[data-cart-count]').forEach((badge) => {
+      badge.textContent = count;
+      badge.hidden = count === 0;
+    });
+    const nav = document.querySelector('#navmenu ul');
+    if (nav && !nav.querySelector('.cart-link')) {
+      const item = document.createElement('li');
+      item.innerHTML = '<a class="cart-link" href="cart.html">Cart <span class="cart-count" data-cart-count hidden>0</span></a>';
+      nav.appendChild(item);
+      item.querySelector('[data-cart-count]').textContent = count;
+      item.querySelector('[data-cart-count]').hidden = count === 0;
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', updateCartNavigation);
+  window.addEventListener('storage', updateCartNavigation);
+
+  function removeMissingPartnerLogo(image) {
+    const removeFigure = () => {
+      const figure = image.closest('.trusted-tech-card');
+      if (figure) figure.remove();
+    };
+
+    image.addEventListener('error', removeFigure, { once: true });
+    if (image.complete && image.naturalWidth === 0) removeFigure();
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.trusted-tech-card img').forEach(removeMissingPartnerLogo);
+  });
+
   /**
    * Apply .scrolled class to the body as the page is scrolled down
    */
   function toggleScrolled() {
     const selectBody = document.querySelector('body');
     const selectHeader = document.querySelector('#header');
+    if (!selectHeader) return;
     if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
     window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
   }
@@ -25,28 +60,33 @@
   /**
    * Mobile nav toggle
    */
-  const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
+  function setupMobileNavigation() {
+    const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
+    const navMenu = document.querySelector('#navmenu');
+    if (!mobileNavToggleBtn || !navMenu) return;
 
-  function mobileNavToogle() {
-    document.querySelector('body').classList.toggle('mobile-nav-active');
-    mobileNavToggleBtn.classList.toggle('bi-list');
-    mobileNavToggleBtn.classList.toggle('bi-x');
-  }
-  if (mobileNavToggleBtn) {
-    mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
-  }
+    function mobileNavToggle() {
+      document.body.classList.toggle('mobile-nav-active');
+      mobileNavToggleBtn.classList.toggle('bi-list');
+      mobileNavToggleBtn.classList.toggle('bi-x');
+    }
 
-  /**
-   * Hide mobile nav on same-page/hash links
-   */
-  document.querySelectorAll('#navmenu a').forEach(navmenu => {
-    navmenu.addEventListener('click', () => {
-      if (document.querySelector('.mobile-nav-active')) {
-        mobileNavToogle();
-      }
+    mobileNavToggleBtn.addEventListener('click', mobileNavToggle);
+
+    navMenu.querySelectorAll('a').forEach((navLink) => {
+      navLink.addEventListener('click', () => {
+        if (document.body.classList.contains('mobile-nav-active')) {
+          mobileNavToggle();
+        }
+      });
     });
+  }
 
-  });
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupMobileNavigation, { once: true });
+  } else {
+    setupMobileNavigation();
+  }
 
   /**
    * Toggle mobile nav dropdowns
@@ -80,13 +120,15 @@
       window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
     }
   }
-  scrollTop.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+  if (scrollTop) {
+    scrollTop.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     });
-  });
+  }
 
   window.addEventListener('load', toggleScrollTop);
   document.addEventListener('scroll', toggleScrollTop);
@@ -95,6 +137,7 @@
    * Animation on scroll function and init
    */
   function aosInit() {
+    if (typeof AOS === 'undefined') return;
     AOS.init({
       duration: 600,
       easing: 'ease-in-out',
@@ -107,9 +150,11 @@
   /**
    * Initiate glightbox
    */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
+  if (typeof GLightbox === 'function') {
+    GLightbox({
+      selector: '.glightbox'
+    });
+  }
 
   /**
    * Init swiper sliders

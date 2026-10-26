@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Product | Imara IT Solutions</title><link rel="icon" href="assets/img/favicon-white.png" type="image/png"><link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css"><link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css"><link rel="stylesheet" href="assets/css/main.css"></head>
+<body class="product-details-page">
+  <header id="header" class="header d-flex align-items-center fixed-top"><div class="container-xl d-flex align-items-center"><a class="logo me-auto" href="index.html"><img src="assets/img/download.png" alt="Imara IT Solutions logo" width="220" height="30"></a><nav id="navmenu" class="navmenu"><ul><li><a href="index.html">Home</a></li><li><a href="equipment.html">Shop</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li><li><a class="cart-link" href="cart.html">Cart <span class="cart-count" data-cart-count hidden>0</span></a></li></ul><i class="mobile-nav-toggle d-xl-none bi bi-list"></i></nav></div></header>
+  <main><section class="product-detail section"><div class="container"><nav class="product-breadcrumb"><a href="equipment.html">Shop</a> / <span id="crumb"></span></nav><div class="row gy-4"><div class="col-lg-6 product-gallery"><img id="product-image" alt="" width="800" height="600"><div class="product-thumbnails"><img id="thumb" alt="" width="72" height="72"></div></div><div class="col-lg-6"><small id="category"></small><h1 id="name"></h1><p><strong id="brand"></strong> · SKU: <span id="sku"></span></p><p>★★★★★ <span id="rating"></span> · <span class="stock-badge" id="stock"></span></p><h2 id="price"></h2><p id="description"></p><ul id="features"></ul><div class="d-flex gap-2 align-items-center mb-3"><label for="quantity">Quantity</label><input id="quantity" type="number" min="1" value="1" style="width:80px"></div><div class="d-flex flex-wrap gap-2"><button id="add" class="btn btn-primary">Add to Cart</button><button id="buy" class="btn btn-outline-primary">Buy Now</button><a id="whatsapp" class="btn btn-success" target="_blank" rel="noopener">Order on WhatsApp</a></div><div class="contact-card mt-4"><strong>Delivery and warranty</strong><p class="mb-0">Nairobi delivery is arranged after confirmation. Every listed item includes supplier warranty according to the final quotation.</p></div></div></div><div class="product-tabs"><ul class="nav nav-tabs" role="tablist"><li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#desc">Description</button></li><li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#specs">Specifications</button></li><li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#box">What's in the Box</button></li><li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#warranty">Warranty</button></li><li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#reviews">3 Reviews</button></li></ul><div class="tab-content p-3"><div id="desc" class="tab-pane fade show active"><p id="tab-description"></p></div><div id="specs" class="tab-pane fade"><table><tbody id="spec-table"></tbody></table></div><div id="box" class="tab-pane fade"><p>Product, power accessories, documentation, and supplier packaging. Exact accessories are confirmed on the quotation.</p></div><div id="warranty" class="tab-pane fade"><p>Supplier warranty applies to the confirmed configuration. Imara can also provide installation and support.</p></div><div id="reviews" class="tab-pane fade"><p>“Clear advice and prompt delivery.” — Nairobi operations manager</p><p>“The configuration matched our office requirements.” — SME director</p><p>“Helpful support after installation.” — Finance team lead</p></div></div></div><h2 class="mt-4">You may also need</h2><div id="related" class="product-grid"></div></div></section></main>
+    <footer id="footer" class="footer">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="footer-logo d-flex align-items-center">
+            <img src="assets/img/download.png" alt="Imara IT Solutions">
+          </a>
+          <div class="footer-contact pt-3">
+            <h4>Get in touch</h4>
+            <p><i class="bi bi-telephone-fill"></i> <a href="tel:+254111787707">+254 111-787-707</a></p>
+            <p><i class="bi bi-whatsapp"></i> <a href="https://wa.me/254104102216" target="_blank" rel="noopener">+254 104-102-216</a></p>
+            <p><i class="bi bi-envelope-fill"></i> <a href="mailto:support@imaratech.co.ke">support@imaratech.co.ke</a></p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#hero">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#about">About</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Helpdesk</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Networks</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Account Management</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Security and Backup</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <h4>Follow Us</h4>
+          <p>Reliable IT support, network management, and cybersecurity for businesses across Nairobi.</p>
+          <div class="social-links d-flex">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/wangari-magdaline/" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright mt-4">
+      <div class="copyright-row">
+        <p>© 2026 <span>All Rights Reserved</span> <strong class="px-1 sitename">Imara IT Solutions</strong></p>
+        <div class="copyright-social">
+          <a href="https://github.com/1magdalene" aria-label="GitHub" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+          <a href="https://www.linkedin.com/in/wangari-magdaline/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="credits">
+        <span class="footer-template-link">Built with <a href="https://bootstrapmade.com/" target="_blank" rel="noopener">BootstrapMade</a>.</span>
+      </div>
+    </div>
+
+  </footer>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script><script src="assets/js/products.js"></script><script src="assets/js/cart.js"></script><script src="assets/js/main.js"></script>
+  <script>
+    const p=ImaraProducts.find(x=>x.id===new URLSearchParams(location.search).get("id"))||ImaraProducts[0], money=n=>"KES "+n.toLocaleString("en-KE"); document.title=p.name+" | Imara IT Solutions"; ["crumb","name","brand","sku","rating","stock","description","tab-description"].forEach(id=>document.getElementById(id).textContent=id==="brand"?p.brand:id==="rating"?p.rating:id==="sku"?p.sku:id==="stock"?p.stock:id==="crumb"?p.name:p[id==="name"?"name":"description"]); document.getElementById("category").textContent=p.category;document.getElementById("price").textContent=money(p.price);document.getElementById("product-image").src=p.image;document.getElementById("product-image").alt=p.name;document.getElementById("thumb").src=p.image;document.getElementById("thumb").alt=p.name;document.getElementById("features").innerHTML=p.features.map(x=>`<li>${x}</li>`).join("");document.getElementById("spec-table").innerHTML=p.features.map((x,i)=>`<tr><td>Feature ${i+1}</td><td>${x}</td></tr>`).join("");document.getElementById("whatsapp").href="https://wa.me/254104102216?text="+encodeURIComponent("Hello Imara, I would like to order "+p.name);document.getElementById("add").onclick=()=>ImaraCart.add(p.id,Number(document.getElementById("quantity").value)||1);document.getElementById("buy").onclick=()=>{ImaraCart.add(p.id,Number(document.getElementById("quantity").value)||1);location.href="cart.html";};document.getElementById("related").innerHTML=ImaraProducts.filter(x=>x.id!==p.id&&x.category===p.category).slice(0,4).map(x=>`<article class="shop-card"><img src="${x.image}" alt="${x.name}" width="640" height="480"><div class="shop-card-body"><h3>${x.name}</h3><strong class="product-price">${money(x.price)}</strong><a class="btn btn-outline-primary mt-auto" href="product.html?id=${x.id}">View product</a></div></article>`).join("");
+  </script>
+</body></html>

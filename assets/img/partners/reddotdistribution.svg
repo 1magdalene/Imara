@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" role="img" aria-labelledby="title">
-  <title>Reddot Distribution</title>
-  <circle cx="38" cy="40" r="18" fill="#e53935"/>
-  <circle cx="38" cy="40" r="7" fill="#fff"/>
-  <text x="70" y="38" fill="#263746" font-family="Arial,sans-serif" font-size="20" font-weight="700">reddot</text>
-  <text x="70" y="58" fill="#697586" font-family="Arial,sans-serif" font-size="13">distribution</text>
-</svg>
