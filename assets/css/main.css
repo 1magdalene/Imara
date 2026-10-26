@@ -24,7 +24,7 @@
   --background-color: #f7f9fc;
   --default-color: #526174;
   --heading-color: #102a43;
-  --accent-color: #1d78a8;
+  --accent-color: #138ee8;
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -32,11 +32,11 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #ffffff;  /* The default color of the main navmenu links */
-  --nav-hover-color: #6b9db5; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #47b2e4; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #6b9db5; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #47b2e4; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -868,7 +868,7 @@ body:not(.index-page) .header {
   --heading-color: #ffffff;
   color: var(--default-color);
   background-color: var(--background-color);
-  background-image: none;
+  background-image: radial-gradient(circle at 85% 20%, rgba(71, 178, 228, 0.25), transparent 38%);
   padding: 150px 0 70px;
   position: relative;
 }
@@ -3330,7 +3330,7 @@ section,
 
 .equipment-note-inner {
   align-items: center;
-  background: var(--surface-color);
+  background: linear-gradient(135deg, var(--surface-color), color-mix(in srgb, var(--accent-color), white 94%));
   border: 1px solid color-mix(in srgb, var(--accent-color), transparent 78%);
   border-radius: 20px;
   box-shadow: 0 18px 45px color-mix(in srgb, var(--heading-color), transparent 90%);
@@ -3469,7 +3469,7 @@ h6 {
 .index-page .header,
 .index-page.scrolled .header,
 body:not(.index-page) .header {
-  --background-color: #102a43;
+  --background-color: rgba(16, 42, 67, 0.94);
 }
 
 .header .logo img {
@@ -3480,7 +3480,7 @@ body:not(.index-page) .header {
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
   background: var(--accent-color);
-  box-shadow: none;
+  box-shadow: 0 8px 20px rgba(19, 142, 232, 0.24);
   font-weight: 600;
 }
 
@@ -3530,7 +3530,10 @@ section,
 }
 
 .hero {
-  background: #102a43;
+  background:
+    radial-gradient(circle at 85% 22%, rgba(56, 196, 255, 0.26), transparent 28%),
+    radial-gradient(circle at 54% 92%, rgba(19, 142, 232, 0.2), transparent 34%),
+    #102a43;
   min-height: 88vh;
   padding: 150px 0 90px;
 }
@@ -3562,7 +3565,7 @@ section,
 
 .hero .btn-get-started {
   background: #38bdf8;
-  box-shadow: 0 4px 12px rgba(16, 42, 67, 0.18);
+  box-shadow: 0 14px 28px rgba(56, 189, 248, 0.22);
   font-weight: 700;
 }
 
@@ -3573,7 +3576,7 @@ section,
 }
 
 .hero .hero-img img {
-  filter: none;
+  filter: drop-shadow(0 28px 40px rgba(0, 0, 0, 0.3));
 }
 
 .clients,
@@ -3743,7 +3746,8 @@ section,
 }
 
 .index-page .hero::after {
-  background-image: none;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 44px 44px;
   content: "";
   inset: 0;
   opacity: 0.35;
@@ -3822,7 +3826,7 @@ section,
 
 .index-page .about .about-copy > p:first-of-type {
   color: var(--heading-color);
-  font-size: clamp(16.5px, 2vw, 21.5px);
+  font-size: clamp(14.5px, 1.8vw, 19.5px);
   line-height: 1.65;
 }
 
@@ -3937,7 +3941,7 @@ section,
 }
 
 .equipment-page .equipment-card > img {
-  background: #edf2f5;
+  background: linear-gradient(145deg, #f8fbff, #edf5fb);
   height: 220px;
 }
 
@@ -3981,7 +3985,9 @@ body:not(.index-page):not(.equipment-page):not(.product-details-page) {
 }
 
 .page-title {
-  background: #102a43;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(56, 189, 248, 0.18), transparent 30%),
+    #102a43;
   color: #ffffff;
   padding: 110px 0 62px;
 }
@@ -4959,7 +4965,7 @@ body:not(.index-page):not(.equipment-page):not(.product-details-page) {
   top: 80px;
   bottom: 0;
   width: 2px;
-  background: #c4d2da;
+  background: linear-gradient(to bottom, color-mix(in srgb, var(--accent-color), transparent 40%), color-mix(in srgb, var(--accent-color), transparent 90%));
   z-index: 0;
 }
 
