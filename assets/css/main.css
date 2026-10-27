@@ -4527,6 +4527,87 @@ body:not(.index-page):not(.equipment-page):not(.product-details-page) {
     padding: 150px 0 64px;
   }
 
+  .contact-page-title p {
+    color: rgba(255, 255, 255, .86);
+    margin: 18px auto 0;
+    max-width: 680px;
+  }
+
+  .contact-section .section-title {
+    margin-bottom: 36px;
+  }
+
+  .contact-info-card {
+    margin-bottom: 16px;
+  }
+
+  .contact-info-card > i {
+    color: var(--accent-color);
+    font-size: 24px;
+  }
+
+  .contact-info-card p {
+    margin-bottom: 0;
+  }
+
+  .contact-action {
+    border-radius: 50px;
+    font-weight: 700;
+    padding: 12px 24px;
+  }
+
+  .contact-submit {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    border-radius: 50px;
+    color: var(--contrast-color);
+    font-weight: 700;
+    padding: 12px 24px;
+  }
+
+  .contact-submit:hover,
+  .contact-submit:focus {
+    background-color: color-mix(in srgb, var(--accent-color), transparent 15%);
+    border-color: color-mix(in srgb, var(--accent-color), transparent 15%);
+    color: var(--contrast-color);
+  }
+
+  .contact-card > p {
+    margin-bottom: 24px;
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    background: var(--surface-color);
+    color: var(--default-color);
+    width: 100%;
+  }
+
+  .contact-form textarea {
+    min-height: 140px;
+  }
+
+  .contact-form .sent-message {
+    background: #059652;
+    border-radius: 8px;
+    color: #fff;
+    margin: 0;
+    padding: 12px;
+  }
+
+  .contact-map .section-title {
+    margin-bottom: 24px;
+  }
+
+  .contact-faq {
+    max-width: 900px;
+  }
+
+  .contact-faq .section-title {
+    margin-bottom: 32px;
+  }
+
   .contact-card {
     background: #fff;
     border-radius: 16px;
@@ -5536,6 +5617,19 @@ section,
 #whatsapp {
   background-color: #198754;
   border-color: #198754;
+  color: #ffffff;
+}
+
+.contact-action {
+  background-color: #198754;
+  border-color: #198754;
+  color: #ffffff;
+}
+
+.contact-action:hover,
+.contact-action:focus {
+  background-color: #146c43;
+  border-color: #146c43;
   color: #ffffff;
 }
 

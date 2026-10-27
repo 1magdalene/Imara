@@ -1,64 +1,172 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contact Imara IT Solutions</title><link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml"><link rel="icon" href="assets/img/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png"><link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png"><link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css"><link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css"><link rel="stylesheet" href="assets/css/main.css"></head><body><header class="contact-banner"><div class="container"><span class="eyebrow">CONTACT IMARA</span><h1>Practical IT help for your next business decision</h1><p>Tell us what your team needs and receive a clear next step from our Nairobi support team.</p></div></header><main><section class="section"><div class="container contact-grid row"><div class="col-lg-5"><div class="contact-info-card mb-3"><i class="bi bi-geo-alt"></i><h3>Address</h3><p>3rd Floor, Imara House, Moi Avenue, Nairobi.</p></div><div class="contact-info-card mb-3"><i class="bi bi-telephone"></i><h3>Phone</h3><p><a href="tel:+254111787707">+254 111-787-707</a></p></div><div class="contact-info-card mb-3"><i class="bi bi-envelope"></i><h3>Email</h3><p><a href="mailto:support@imaratech.co.ke">support@imaratech.co.ke</a></p></div><div class="contact-info-card mb-3"><i class="bi bi-clock"></i><h3>Hours</h3><p>Monday–Friday, 8:00 AM–6:00 PM<br>Saturday, 9:00 AM–1:00 PM</p></div><a class="btn btn-success" href="https://wa.me/254104102216" target="_blank" rel="noopener">Message us on WhatsApp</a></div><div class="col-lg-7"><div class="contact-card"><h2>Request a consultation</h2><form id="contact-form" class="contact-form row g-3"><input class="col-md-6" name="name" placeholder="Full name" required><input class="col-md-6" name="business" placeholder="Business name" required><input class="col-md-6" type="email" name="email" placeholder="Email address" required><input class="col-md-6" name="phone" placeholder="Phone number" required><select class="col-12" name="service" required><option value="">Select a service</option><option>IT support</option><option>Network setup</option><option>Cybersecurity</option><option>Backup and recovery</option><option>Equipment supply</option></select><textarea class="col-12" name="message" rows="5" placeholder="How can we help?" required></textarea><button class="btn btn-primary" type="submit">Send request</button><p id="contact-success" class="sent-message" hidden>Thanks. Your request is ready for an Imara consultant to follow up.</p></form></div></div></div></section><section class="section contact-map"><div class="container"><h2>Find our Nairobi office</h2><iframe title="Imara IT Solutions location in Nairobi" loading="lazy" src="https://www.google.com/maps?q=Moi+Avenue+Nairobi&output=embed"></iframe></div></section><section class="section"><div class="container"><h2>Frequently asked questions</h2><div class="accordion" id="contact-faq"><div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">How quickly can support start?</button></h3><div id="faq1" class="accordion-collapse collapse show"><div class="accordion-body">Urgent business support is triaged the same working day, subject to your support plan and issue severity.</div></div></div><div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">Do you serve businesses outside Nairobi?</button></h3><div id="faq2" class="accordion-collapse collapse"><div class="accordion-body">Yes. Remote support and scheduled Kenya-wide deployments are available for suitable business environments.</div></div></div><div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq3">Can you recommend equipment?</button></h3><div id="faq3" class="accordion-collapse collapse"><div class="accordion-body">We match equipment to users, applications, security needs, budget, warranty, and future growth.</div></div></div><div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq4">How do quotations work?</button></h3><div id="faq4" class="accordion-collapse collapse"><div class="accordion-body">We confirm requirements, availability, delivery, VAT, warranty, and implementation before sending a clear quotation.</div></div></div></div></div></section></main>  <footer id="footer" class="footer">
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Contact Imara IT Solutions | IT Support in Nairobi</title>
+  <meta name="description" content="Contact Imara IT Solutions for reliable IT support, network setup, cybersecurity, and equipment supply in Nairobi.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="contact-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <img src="assets/img/download.png" alt="Imara IT Solutions">
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="equipment.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="index.html#pricing">Pricing</a></li>
+          <li><a href="index.html#team">Team</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <a class="btn-getstarted" href="#contact-form">Get a Free Quote</a>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="page-title contact-page-title">
+      <div class="container text-center">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <ol class="justify-content-center">
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Contact</li>
+          </ol>
+        </nav>
+        <span class="section-eyebrow">CONTACT IMARA</span>
+        <h1>Practical IT help for your next business decision</h1>
+        <p>Tell us what your team needs and receive a clear next step from our Nairobi support team.</p>
+      </div>
+    </div>
+
+    <section class="section contact-section">
+      <div class="container">
+        <div class="section-title text-center">
+          <span class="section-eyebrow">LET'S TALK</span>
+          <h2>How can we help?</h2>
+          <p>Whether you need urgent support or are planning your next IT project, our team is ready to help.</p>
+        </div>
+        <div class="row gy-4 align-items-stretch">
+          <div class="col-lg-5">
+            <div class="contact-info-card">
+              <i class="bi bi-geo-alt" aria-hidden="true"></i>
+              <h3>Address</h3>
+              <p>3rd Floor, Imara House, Moi Avenue, Nairobi.</p>
+            </div>
+            <div class="contact-info-card">
+              <i class="bi bi-telephone" aria-hidden="true"></i>
+              <h3>Phone</h3>
+              <p><a href="tel:+254111787707">+254 111-787-707</a></p>
+            </div>
+            <div class="contact-info-card">
+              <i class="bi bi-envelope" aria-hidden="true"></i>
+              <h3>Email</h3>
+              <p><a href="mailto:support@imaratech.co.ke">support@imaratech.co.ke</a></p>
+            </div>
+            <div class="contact-info-card">
+              <i class="bi bi-clock" aria-hidden="true"></i>
+              <h3>Hours</h3>
+              <p>Monday–Friday, 8:00 AM–6:00 PM<br>Saturday, 9:00 AM–1:00 PM</p>
+            </div>
+            <a class="btn contact-action" href="https://wa.me/254707253196" target="_blank" rel="noopener">
+              <i class="bi bi-whatsapp" aria-hidden="true"></i> Message us on WhatsApp
+            </a>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="contact-card">
+              <h2>Request a consultation</h2>
+              <p>Share a few details and an Imara consultant will follow up with a clear next step.</p>
+              <form id="contact-form" class="contact-form row g-3">
+                <div class="col-md-6"><label class="visually-hidden" for="contact-name">Full name</label><input id="contact-name" name="name" placeholder="Full name" required></div>
+                <div class="col-md-6"><label class="visually-hidden" for="contact-business">Business name</label><input id="contact-business" name="business" placeholder="Business name" required></div>
+                <div class="col-md-6"><label class="visually-hidden" for="contact-email">Email address</label><input id="contact-email" type="email" name="email" placeholder="Email address" required></div>
+                <div class="col-md-6"><label class="visually-hidden" for="contact-phone">Phone number</label><input id="contact-phone" name="phone" placeholder="Phone number" required></div>
+                <div class="col-12"><label class="visually-hidden" for="contact-service">Select a service</label><select id="contact-service" name="service" required><option value="">Select a service</option><option>IT support</option><option>Network setup</option><option>Cybersecurity</option><option>Backup and recovery</option><option>Equipment supply</option></select></div>
+                <div class="col-12"><label class="visually-hidden" for="contact-message">How can we help?</label><textarea id="contact-message" name="message" rows="5" placeholder="How can we help?" required></textarea></div>
+                <div class="col-12 text-center"><button class="btn contact-submit" type="submit">Send request</button></div>
+                <p id="contact-success" class="sent-message text-center" hidden>Thanks. Your request is ready for an Imara consultant to follow up.</p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-map light-background">
+      <div class="container text-center">
+        <div class="section-title">
+          <span class="section-eyebrow">VISIT US</span>
+          <h2>Find our Nairobi office</h2>
+        </div>
+        <iframe title="Imara IT Solutions location in Nairobi" loading="lazy" src="https://www.google.com/maps?q=Moi+Avenue+Nairobi&output=embed"></iframe>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-faq">
+        <div class="section-title text-center">
+          <span class="section-eyebrow">NEED TO KNOW</span>
+          <h2>Frequently asked questions</h2>
+        </div>
+        <div class="accordion" id="contact-faq">
+          <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">How quickly can support start?</button></h3><div id="faq1" class="accordion-collapse collapse show"><div class="accordion-body">Urgent business support is triaged the same working day, subject to your support plan and issue severity.</div></div></div>
+          <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">Do you serve businesses outside Nairobi?</button></h3><div id="faq2" class="accordion-collapse collapse"><div class="accordion-body">Yes. Remote support and scheduled Kenya-wide deployments are available for suitable business environments.</div></div></div>
+          <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq3">Can you recommend equipment?</button></h3><div id="faq3" class="accordion-collapse collapse"><div class="accordion-body">We match equipment to users, applications, security needs, budget, warranty, and future growth.</div></div></div>
+          <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq4">How do quotations work?</button></h3><div id="faq4" class="accordion-collapse collapse"><div class="accordion-body">We confirm requirements, availability, delivery, VAT, warranty, and implementation before sending a clear quotation.</div></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer">
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="footer-logo d-flex align-items-center">
-            <img src="assets/img/download.png" alt="Imara IT Solutions">
-          </a>
+          <a href="index.html" class="footer-logo d-flex align-items-center"><img src="assets/img/download.png" alt="Imara IT Solutions"></a>
           <div class="footer-contact pt-3">
             <h4>Get in touch</h4>
             <p><i class="bi bi-telephone-fill"></i> <a href="tel:+254111787707">+254 111-787-707</a></p>
-            <p><i class="bi bi-whatsapp"></i> <a href="https://wa.me/254104102216" target="_blank" rel="noopener">+254 104-102-216</a></p>
+            <p><i class="bi bi-whatsapp"></i> <a href="https://wa.me/254707253196" target="_blank" rel="noopener">+254 707 253 196</a></p>
             <p><i class="bi bi-envelope-fill"></i> <a href="mailto:support@imaratech.co.ke">support@imaratech.co.ke</a></p>
           </div>
         </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="index.html#hero">Home</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="index.html#about">About</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Services</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Helpdesk</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Networks</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Account Management</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Security and Backup</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-4 col-md-12">
-          <h4>Follow Us</h4>
-          <p>Reliable IT support, network management, and cybersecurity for businesses across Nairobi.</p>
-          <div class="social-links d-flex">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/wangari-magdaline/" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-
+        <div class="col-lg-2 col-md-3 footer-links"><h4>Useful Links</h4><ul><li><i class="bi bi-chevron-right"></i> <a href="index.html#hero">Home</a></li><li><i class="bi bi-chevron-right"></i> <a href="index.html#about">About</a></li><li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Services</a></li><li><i class="bi bi-chevron-right"></i> <a href="contact.html">Contact</a></li></ul></div>
+        <div class="col-lg-2 col-md-3 footer-links"><h4>Our Services</h4><ul><li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Helpdesk</a></li><li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Networks</a></li><li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Account Management</a></li><li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Security and Backup</a></li></ul></div>
+        <div class="col-lg-4 col-md-12"><h4>Follow Us</h4><p>Reliable IT support, network management, and cybersecurity for businesses across Nairobi.</p><div class="social-links d-flex"><a href="" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a><a href="" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="https://www.linkedin.com/in/wangari-magdaline/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></div></div>
       </div>
     </div>
+    <div class="container copyright mt-4"><div class="copyright-row"><p>© 2026 <span>All Rights Reserved</span> <strong class="px-1 sitename">Imara IT Solutions</strong></p><div class="copyright-social"><a href="https://github.com/1magdalene/Imara" aria-label="GitHub" target="_blank" rel="noopener"><i class="bi bi-github"></i></a><a href="https://www.linkedin.com/in/wangari-magdaline/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a></div></div><div class="credits"><span class="footer-template-link">Built with <a href="https://bootstrapmade.com/" target="_blank" rel="noopener">BootstrapMade</a>.</span></div></div>
+  </footer>
 
-    <div class="container copyright mt-4">
-      <div class="copyright-row">
-        <p>© 2026 <span>All Rights Reserved</span> <strong class="px-1 sitename">Imara IT Solutions</strong></p>
-        <div class="copyright-social">
-          <a href="https://github.com/1magdalene/Imara" aria-label="GitHub" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
-          <a href="https://www.linkedin.com/in/wangari-magdaline/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
-        </div>
-      </div>
-      <div class="credits">
-        <span class="footer-template-link">Built with <a href="https://bootstrapmade.com/" target="_blank" rel="noopener">BootstrapMade</a>.</span>
-      </div>
-    </div>
-
-  </footer><script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script><script src="assets/js/main.js"></script><script>document.querySelector("#contact-form").onsubmit=e=>{e.preventDefault();document.querySelector("#contact-success").hidden=false;e.target.reset();};</script></body></html>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.querySelector("#contact-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      document.querySelector("#contact-success").hidden = false;
+      event.target.reset();
+    });
+  </script>
+</body>
+</html>
